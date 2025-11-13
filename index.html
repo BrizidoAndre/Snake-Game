@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Snake Game</title>
+</head>
+<body>
+<main>
+    <div class="container">
+        <div class="modal">
+            <form class="container" id="form-login">
+                <label for="username">Nickname</label>
+                <input
+                        id="username"
+                        type="text"
+                        required
+                >
+                <label for="password">Senha</label>
+                <input
+                        id="password"
+                        type="password"
+                        required
+                >
+                <p class="error-message" id="error-message"></p>
+                <button class="btn">Login</button>
+            </form>
+
+            <section class="modal-welcome hide" id="welcome">
+                <h2 id="username-show"></h2>
+                <h1>Logo</h1>
+                <p>Bem vindo ao Snake Nutrition! Um jogo destinado ao ensino de hábitos nutricionair saudáveis. Preparado para embarcar nessa jornada</p>
+                <button class="btn btn-green" id='btn-welcome'>Vamos lá</button>
+            </section>
+            <section class="modal-start-game hide" id="modal-start-game">
+                <button class="btn btn-green" id="btn-start-game">Iniciar partida</button>
+                <button class="btn btn-green" id="btn-ranking">Ver ranking</button>
+            </section>
+        </div>
+    </div>
+
+    <section class="container-game" id="game" >
+        <div class="col">
+            <p>Pontuação:</p>
+            <p id="point">0</p>
+            <p>Comidas saudáveis:</p>
+            <p id="healthy">0</p>
+            <p>Comidas não saudáveis:</p>
+            <p id="not-healthy">0</p>
+            <p>Nível:</p>
+            <p id="level">1</p>
+        </div>
+        <div class="col">
+            <canvas id="canvas"></canvas>
+        </div>
+    </section>
+
+    <section class="container-game container-rank" id="rank">
+        <table>
+            <thead>
+            <tr>
+                <th>Ranking</th>
+                <th>Nickname</th>
+                <th>Pontuação</th>
+                <th>Frutas</th>
+                <th>Medalhas</th>
+                <th>Troféus</th>
+            </tr>
+            </thead>
+            <tbody id="table">
+            </tbody>
+        </table>
+        <div class="row">
+            <button class="btn"  id="btn-playAgain">Iniciar partida</button>
+            <button class="btn"  id="btn-menu">Menu inicial</button>
+        </div>
+    </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
